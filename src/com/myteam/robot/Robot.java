@@ -68,7 +68,10 @@ public class Robot extends IterativeRobot {
     
     @Override
     public void autonomousPeriodic(){
-    	
+    	Strongback.submit(new Auto(driveM, 0.0,0.7,0.0, 10.0,shoot));
+    	/*
+    	 * This runs a command group
+    	 */
     }
     @Override
     public void teleopInit() {
