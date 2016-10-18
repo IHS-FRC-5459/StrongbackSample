@@ -17,7 +17,7 @@ public class TimedShoot extends Command{
 		}else{
 			return true;
 		}
-		
+		//runs the command for the given time
 		return false;
 	}
 	
