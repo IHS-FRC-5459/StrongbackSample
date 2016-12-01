@@ -45,7 +45,7 @@ public class DisplayData extends Command{
 			SmartDashboard.putBoolean("switch", true);
 		}
 		//puts the boolean on based on the switch
-		return true;
+		return false;
 		//Continues to put data on
 	}
 	
