@@ -13,7 +13,6 @@ import org.strongback.components.ui.FlightStick;
 import org.strongback.drive.MecanumDrive;
 import org.strongback.drive.TankDrive;
 import org.strongback.hardware.Hardware;
-import edu.wpi.first.wpilibj.SPI;
 
 import edu.wpi.first.wpilibj.IterativeRobot;
 
@@ -25,6 +24,7 @@ public class Robot extends IterativeRobot {
 	private static final int BRport = 4;
 	private Accelerometer accel;
 	private Gyroscope gyro;
+//	private ADXRS450_Gyro base;
 	private DistanceSensor forawardSensor;
 	private DistanceSensor sideSensor;
 	private Switch limitSwitch;
@@ -53,7 +53,7 @@ public class Robot extends IterativeRobot {
     	Motor Right = Motor.compose(FR, BR);
     	Motor Left = Motor.compose(FL, BL);
     	accel = Hardware.Accelerometers.analogAccelerometer(0, 0.18, 0.0/*this value is determined experimentally */);
-    	gyro = Hardware.AngleSensors.gyroscope(SPI.Port.kOnboardCS0);
+//    	gyro = Hardware.AngleSensors.gyroscope(base);
     	forawardSensor = Hardware.DistanceSensors.analogUltrasonic(0, 3.63);
     	sideSensor = Hardware.DistanceSensors.analogUltrasonic(1, 3.63);
     	limitSwitch = Hardware.Switches.normallyOpen(1);
